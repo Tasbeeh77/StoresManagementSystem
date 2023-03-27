@@ -89,7 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="report2.cs" />
-    <Compile Include="report4.cs" />
+    <Compile Include="Itemreports.cs" />
     <Compile Include="ReportsDialog.cs">
       <SubType>Form</SubType>
     </Compile>

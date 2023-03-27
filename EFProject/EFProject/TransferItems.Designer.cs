@@ -251,6 +251,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label3);
             this.Name = "TransferItems";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transfer Items";
             this.Load += new System.EventHandler(this.TransferItems_Load);
             this.panel4.ResumeLayout(false);

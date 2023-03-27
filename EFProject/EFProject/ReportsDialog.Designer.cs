@@ -851,6 +851,7 @@
             this.button5.TabIndex = 34;
             this.button5.Text = "Show";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // ReportsDialog
             // 
@@ -860,6 +861,7 @@
             this.ClientSize = new System.Drawing.Size(1033, 741);
             this.Controls.Add(this.tabControl1);
             this.Name = "ReportsDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportsDialog";
             this.Load += new System.EventHandler(this.ReportsDialog_Load);
             this.tabControl1.ResumeLayout(false);

@@ -14,7 +14,7 @@ namespace EFProject
         List<string> stores = new List<string>();
         List<showAllData> data = new List<showAllData>();
         List<report2> items= new List<report2>();
-        List<report4> itemsReport = new List<report4>();
+        List<Itemreports> itemsReport = new List<Itemreports>();
         IQueryable<Items_Movement> transfered;
         List<int> fromstores = new List<int>();
         List<int> tostores = new List<int>();
@@ -25,6 +25,10 @@ namespace EFProject
         string measurement="";
         int storeid;
         #endregion
+        public ReportsDialog()
+        {
+            InitializeComponent();
+        }
 
         #region Report 1
         private void button1_Click(object sender, EventArgs e)
@@ -227,28 +231,27 @@ namespace EFProject
             productsId.Add(prodid);
         }
 
-        [Obsolete]
         private void button4_Click(object sender, EventArgs e)
         {
             itemsReport.Clear();
             comboBox8.Items.Clear();
             listBox1.Items.Clear();
             dataGridView4.DataSource = null;
-            int monthNo = int.Parse(textBox1.Text);
+            double monthNo = int.Parse(textBox1.Text);
 
             foreach (var item in productsId)
             {
                 var permid = (from d in Ent.Permissions_Items where (d.Item_Code == item) select d.Perm_Id).FirstOrDefault();
                 var permdate = (from p in Ent.Permissions
                                 where (p.Perm_Type == "Import" && p.Store_Id == storeid && p.Perm_Id == permid)
-                                where EntityFunctions.DiffMonths(p.Perm_Date,DateTime.Now) <= monthNo
-                                select p).FirstOrDefault();
+                                select p.Perm_Date).FirstOrDefault();
                 var total_count = (from s in Ent.Store_Items where (s.Item_Code == item && s.Store_Id == storeid) select s.Item_Total_Count).FirstOrDefault();
                 var prod = Ent.Items.Find(item);
 
-                if(permdate!=null)
+                double diff = ((DateTime.Now - permdate).TotalDays) / 30;
+                if (diff <= monthNo && diff >= 0.0)
                 {
-                    report4 report = new report4();
+                    Itemreports report = new Itemreports();
                     report.prodId = item;
                     report.prodName = prod.Item_Name;
                     report.Store_Name = comboBox7.Text;
@@ -256,7 +259,7 @@ namespace EFProject
                     report.Prod_Date = prod.Prod_Date;
                     report.Expire_Date = prod.Validity_Period;
                     report.Item_Total_Count = total_count;
-                    report.Permission_Date = permdate.Perm_Date;
+                    report.Permission_Date = permdate;
                     itemsReport.Add(report);
                 }
             }
@@ -266,12 +269,35 @@ namespace EFProject
         #endregion
 
         #region Report 5
-
-        #endregion
-        public ReportsDialog()
+        private void button5_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            double monthNo = double.Parse(textBox2.Text);
+            itemsReport.Clear();
+            dataGridView5.DataSource = null;
+            foreach (var item in Ent.Items)
+            {
+                double diff = ((item.Validity_Period - DateTime.Now).TotalDays) / 30;
+                if (diff<=monthNo && diff>=0.0)
+                {
+                    var stores = from s in Ent.Store_Items where (s.Item_Code == item.Item_Code) select s;
+                    foreach (var store in stores)
+                    {
+                        var stName = (from ss in Ent.Stores where ss.Store_Id == store.Store_Id select ss.Store_Name).FirstOrDefault();
+                        Itemreports report = new Itemreports();
+                        report.prodId = item.Item_Code;
+                        report.prodName = item.Item_Name;
+                        report.Store_Name = stName;
+                        report.Store_Id = store.Store_Id;
+                        report.Prod_Date = item.Prod_Date;
+                        report.Expire_Date = item.Validity_Period;
+                        report.Item_Total_Count = store.Item_Total_Count;
+                        itemsReport.Add(report);                 
+                    }
+                }                   
+            }
+            dataGridView5.DataSource = itemsReport;
         }
+        #endregion
         private void ReportsDialog_Load(object sender, EventArgs e)
         {
             foreach (var item in Ent.Stores)
