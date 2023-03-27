@@ -43,7 +43,7 @@ Begin
 End
 Go
 -- update
-alter proc Update_Item  @itmcode int ,  @itmname nvarchar(50), @prodDate Date , @expDate Date,  @count int,@type varchar(50) = 'Import'
+alter proc Update_Item  @itmcode int ,  @itmname nvarchar(50), @prodDate Date , @expDate Date,  @count int =0 ,@type varchar(50) = 'Import'
 as 
 Begin 
  If(@type = 'Import')
@@ -110,6 +110,7 @@ Begin
     Select 'Already exist'
 End
 Go
+Insert_Customer 'gggggg','014566','1459','ggggggggggggg'
 -- update
 create proc Update_Customer  @cusname varchar(50), @phone varchar(50), @fax varchar(50), @email varchar(50)
 as 
@@ -127,7 +128,6 @@ Begin
    IF EXISTS (SELECT Cust_Name FROM Customers WHERE Cust_Name = @cusname)
 	   Begin 
 			DELETE from Customers where Cust_Name = @cusname
-			DBCC CHECKIDENT ('Customers', RESEED, 1)
 	   End
   ELSE
      select 'not exist'

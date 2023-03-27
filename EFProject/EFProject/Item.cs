@@ -30,7 +30,6 @@ namespace EFProject
 
         [Column(TypeName = "date")]
         public DateTime Validity_Period { get; set; }
-       // [Column(TypeName = "int")]
         [Column(name: "total_Count")]
         public int total_Count { get; set; }
 

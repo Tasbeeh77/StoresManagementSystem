@@ -628,6 +628,7 @@
             this.tabPage4.Controls.Add(this.dataGridView4);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.panel3);
+            this.tabPage4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -698,9 +699,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 160);
+            this.textBox1.Location = new System.Drawing.Point(211, 168);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 32);
+            this.textBox1.Size = new System.Drawing.Size(227, 26);
             this.textBox1.TabIndex = 31;
             // 
             // label20
@@ -717,9 +718,9 @@
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(213, 59);
+            this.comboBox7.Location = new System.Drawing.Point(211, 67);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(227, 32);
+            this.comboBox7.Size = new System.Drawing.Size(227, 26);
             this.comboBox7.TabIndex = 29;
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
@@ -765,9 +766,9 @@
             // comboBox8
             // 
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(213, 108);
+            this.comboBox8.Location = new System.Drawing.Point(211, 116);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(227, 32);
+            this.comboBox8.Size = new System.Drawing.Size(227, 26);
             this.comboBox8.TabIndex = 18;
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
@@ -777,6 +778,7 @@
             this.tabPage5.Controls.Add(this.dataGridView5);
             this.tabPage5.Controls.Add(this.label23);
             this.tabPage5.Controls.Add(this.panel5);
+            this.tabPage5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -821,6 +823,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(474, 52);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 32);
             this.textBox2.TabIndex = 40;

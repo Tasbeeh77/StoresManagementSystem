@@ -389,7 +389,7 @@ namespace EFProject
             {
                 MessageBox.Show("Updated Successfully");
                 clearTextBoxes();
-                button11_Click(this, null);
+                DisplayDataGridView();
             }
         }
         #endregion
