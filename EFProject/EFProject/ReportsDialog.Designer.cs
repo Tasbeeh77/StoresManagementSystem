@@ -76,6 +76,10 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -85,22 +89,9 @@
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -684,6 +675,45 @@
             this.panel3.Size = new System.Drawing.Size(946, 232);
             this.panel3.TabIndex = 33;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label21.Location = new System.Drawing.Point(640, 16);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(279, 30);
+            this.label21.TabIndex = 33;
+            this.label21.Text = "choose one or more";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(645, 59);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(274, 151);
+            this.listBox1.TabIndex = 32;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(213, 160);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 32);
+            this.textBox1.TabIndex = 31;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(16, 162);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(191, 30);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Time (Month)";
+            // 
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
@@ -758,11 +788,11 @@
             // 
             this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(42, 292);
+            this.dataGridView5.Location = new System.Drawing.Point(42, 266);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(946, 392);
+            this.dataGridView5.Size = new System.Drawing.Size(946, 418);
             this.dataGridView5.TabIndex = 34;
             // 
             // label23
@@ -780,72 +810,31 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.panel5.Controls.Add(this.comboBox10);
+            this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.comboBox11);
-            this.panel5.Controls.Add(this.checkBox5);
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Controls.Add(this.dateTimePicker9);
-            this.panel5.Controls.Add(this.dateTimePicker10);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.comboBox12);
             this.panel5.Location = new System.Drawing.Point(42, 41);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(946, 232);
+            this.panel5.Size = new System.Drawing.Size(946, 203);
             this.panel5.TabIndex = 33;
             // 
-            // comboBox10
+            // textBox2
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(249, 116);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(227, 32);
-            this.comboBox10.TabIndex = 29;
+            this.textBox2.Location = new System.Drawing.Point(474, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(227, 32);
+            this.textBox2.TabIndex = 40;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Location = new System.Drawing.Point(63, 114);
+            this.label24.Location = new System.Drawing.Point(277, 54);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(180, 30);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "From Stores";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(77, 61);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(135, 30);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "Products";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(249, 172);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(227, 32);
-            this.comboBox11.TabIndex = 25;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.checkBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox5.Location = new System.Drawing.Point(534, 172);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(69, 34);
-            this.checkBox5.TabIndex = 24;
-            this.checkBox5.Text = "All";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.label24.Size = new System.Drawing.Size(191, 30);
+            this.label24.TabIndex = 39;
+            this.label24.Text = "Time (Month)";
             // 
             // button5
             // 
@@ -856,108 +845,12 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(629, 162);
+            this.button5.Location = new System.Drawing.Point(402, 117);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 55);
-            this.button5.TabIndex = 15;
+            this.button5.Size = new System.Drawing.Size(139, 55);
+            this.button5.TabIndex = 34;
             this.button5.Text = "Show";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(77, 168);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(147, 30);
-            this.label26.TabIndex = 23;
-            this.label26.Text = "To Stores";
-            // 
-            // dateTimePicker9
-            // 
-            this.dateTimePicker9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker9.Location = new System.Drawing.Point(609, 61);
-            this.dateTimePicker9.Name = "dateTimePicker9";
-            this.dateTimePicker9.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker9.TabIndex = 22;
-            // 
-            // dateTimePicker10
-            // 
-            this.dateTimePicker10.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.dateTimePicker10.Location = new System.Drawing.Point(609, 113);
-            this.dateTimePicker10.Name = "dateTimePicker10";
-            this.dateTimePicker10.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker10.TabIndex = 21;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(542, 108);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(48, 30);
-            this.label27.TabIndex = 20;
-            this.label27.Text = "To";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label28.Location = new System.Drawing.Point(522, 57);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(81, 30);
-            this.label28.TabIndex = 19;
-            this.label28.Text = "From";
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(249, 61);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(227, 32);
-            this.comboBox12.TabIndex = 18;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(16, 162);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 30);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "Time (Month)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(213, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 32);
-            this.textBox1.TabIndex = 31;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(645, 59);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(274, 151);
-            this.listBox1.TabIndex = 32;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(640, 16);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(279, 30);
-            this.label21.TabIndex = 33;
-            this.label21.Text = "choose one or more";
             // 
             // ReportsDialog
             // 
@@ -1058,21 +951,12 @@
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DateTimePicker dateTimePicker9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker10;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button5;
     }
 }

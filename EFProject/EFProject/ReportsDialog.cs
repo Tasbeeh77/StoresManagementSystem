@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace EFProject
         List<string> stores = new List<string>();
         List<showAllData> data = new List<showAllData>();
         List<report2> items= new List<report2>();
+        List<report4> itemsReport = new List<report4>();
         IQueryable<Items_Movement> transfered;
         List<int> fromstores = new List<int>();
         List<int> tostores = new List<int>();
@@ -225,20 +227,46 @@ namespace EFProject
             productsId.Add(prodid);
         }
 
+        [Obsolete]
         private void button4_Click(object sender, EventArgs e)
         {
+            itemsReport.Clear();
+            comboBox8.Items.Clear();
+            listBox1.Items.Clear();
+            dataGridView4.DataSource = null;
+            int monthNo = int.Parse(textBox1.Text);
 
             foreach (var item in productsId)
             {
                 var permid = (from d in Ent.Permissions_Items where (d.Item_Code == item) select d.Perm_Id).FirstOrDefault();
-                var permdate = (from p in Ent.Permissions where (p.Perm_Type == "Import" && p.Store_Id == storeid && p.Perm_Id == permid) select p.Perm_Date).FirstOrDefault();
-                if(true)
-                {
+                var permdate = (from p in Ent.Permissions
+                                where (p.Perm_Type == "Import" && p.Store_Id == storeid && p.Perm_Id == permid)
+                                where EntityFunctions.DiffMonths(p.Perm_Date,DateTime.Now) <= monthNo
+                                select p).FirstOrDefault();
+                var total_count = (from s in Ent.Store_Items where (s.Item_Code == item && s.Store_Id == storeid) select s.Item_Total_Count).FirstOrDefault();
+                var prod = Ent.Items.Find(item);
 
+                if(permdate!=null)
+                {
+                    report4 report = new report4();
+                    report.prodId = item;
+                    report.prodName = prod.Item_Name;
+                    report.Store_Name = comboBox7.Text;
+                    report.Store_Id = storeid;
+                    report.Prod_Date = prod.Prod_Date;
+                    report.Expire_Date = prod.Validity_Period;
+                    report.Item_Total_Count = total_count;
+                    report.Permission_Date = permdate.Perm_Date;
+                    itemsReport.Add(report);
                 }
             }
+            dataGridView4.DataSource = itemsReport;
             productsId.Clear();
         }
+        #endregion
+
+        #region Report 5
+
         #endregion
         public ReportsDialog()
         {
